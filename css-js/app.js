@@ -1,4 +1,4 @@
-var newApp = angular.module('newApp', ['ngRoute']);
+var newApp = angular.module('newApp', ['ngRoute', 'ngAnimate']);
 
 newApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
@@ -57,6 +57,10 @@ newApp.controller('FirstController', ['$scope', '$http', function($scope, $http)
     	$scope.newFruit.color = '';
     	$scope.newFruit.available = '';
     }
+
+	$scope.removeAll = function() {
+		$scope.fruits = [];
+	}
 
 	$http.get('data/fruits.json').success(function(data) {
 		$scope.fruits = data;

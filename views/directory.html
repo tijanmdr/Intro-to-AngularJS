@@ -2,7 +2,7 @@
     <button ng-click="order = 'name'">Order by name</button>
     <button ng-click="order = 'color'">Order by color</button>
     <input type="text" ng-model="search">
-    <ul>
+    <ul id="fruit-list">
         <li ng-repeat="fruit in fruits | orderBy: order | filter: search" ng-show="fruit.available">
             <img ng-src="{{fruit.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;"
                  ng-show="fruit.thumb">
@@ -21,4 +21,5 @@
         </select>
         <input type="submit" value="Add new fruit">
     </form>
+    <a href="" ng-click="removeAll()">Remove All Fruits</a>
 </div>
