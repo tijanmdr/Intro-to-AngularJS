@@ -3,7 +3,8 @@ var newApp = angular.module('newApp', ['ngRoute']);
 newApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/home', {
-			templateUrl: "views/home.html"
+			templateUrl: "views/home.html",
+			controller: "FirstController"
 		})
 		.when('/directory', {
 			templateUrl: "views/directory.html",
@@ -12,6 +13,20 @@ newApp.config(['$routeProvider', function($routeProvider) {
 		.otherwise({
 			redirectTo: '/home'
 		});
+}]);
+
+newApp.directive('randomFruit', [function() {
+	return {
+		restrict: 'E',
+		scope: {
+			fruits: "=",
+			title: "="
+		},
+		templateUrl: 'views/random.html',
+		controller: function ($scope) {
+			$scope.random = Math.floor(Math.random() * 4);
+		}
+	};
 }]);
 
 newApp.controller('FirstController', ['$scope', '$http', function($scope, $http) {
