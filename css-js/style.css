@@ -1,5 +1,5 @@
 body {
-    font-family: Helvetica;
+    font-family: 'Helvetica';
     margin: 0;
 }
 
@@ -93,7 +93,7 @@ main {
     font-size: 22px;
 }
 
-.content input {
+.content input, .content textarea, .content select {
     width: 90%;
     padding: 10px 5%;
     border-radius: 10px;
@@ -173,4 +173,8 @@ main.ng-enter.ng-enter-active {
 #fruit-list li.ng-leave-stagger {
     transition-delay: 0.5s;
     transition-duration: 0;
+}
+
+input.ng-dirty.ng-empty, textarea.ng-dirty.ng-empty {
+    border: 2px solid red;
 }
