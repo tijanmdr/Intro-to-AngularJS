@@ -24,6 +24,7 @@ newApp.directive('randomFruit', [function() {
 		},
 		templateUrl: 'views/random.html',
 		transclude: true,
+		replace: true, // Replaces directive with template outermost tag
 		controller: function ($scope) {
 			$scope.random = Math.floor(Math.random() * 4);
 		}
