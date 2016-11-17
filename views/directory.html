@@ -1,0 +1,24 @@
+<div class="content">
+    <button ng-click="order = 'name'">Order by name</button>
+    <button ng-click="order = 'color'">Order by color</button>
+    <input type="text" ng-model="search">
+    <ul>
+        <li ng-repeat="fruit in fruits | orderBy: order | filter: search" ng-show="fruit.available">
+            <img ng-src="{{fruit.thumb}}" style="margin: -12px 10px 0 0; float: left; width: 50px;"
+                 ng-show="fruit.thumb">
+            <h3>{{fruit.name}}: {{fruit.rate | currency: '&#x20B9; '}}</h3>
+            <div class="remove" ng-click="removeFruit(fruit)">x</div>
+            <span style="background: {{fruit.color}}">{{fruit.color}}</span>
+        </li>
+    </ul>
+    <form ng-submit="addFruit()">
+        <input type="text" placeholder="Name" ng-model="newFruit.name">
+        <input type="text" placeholder="Color" ng-model="newFruit.color">
+        <input type="text" placeholder="Rate" ng-model="newFruit.rate">
+        <select ng-model="newFruit.available">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select>
+        <input type="submit" value="Add new fruit">
+    </form>
+</div>

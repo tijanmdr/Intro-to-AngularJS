@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Apple",
+    "color": "Red",
+    "rate": 50,
+    "available": true,
+    "thumb": "img/apple.png"
+  },
+  {
+    "name": "Orange",
+    "color": "Orange",
+    "rate": 30,
+    "available": false,
+    "thumb": "img/orange.png"
+  },
+  {
+    "name": "Peach",
+    "color": "Maroon",
+    "rate": 30,
+    "available": true,
+    "thumb": "img/peach.png"
+  },
+  {
+    "name": "Mango",
+    "color": "Yellow",
+    "rate": 80,
+    "available": false,
+    "thumb": "img/mango.png"
+  },
+  {
+    "name": "Banana",
+    "color": "Yellow",
+    "rate": 120,
+    "available": true,
+    "thumb": "img/banana.png"
+  }
+]
